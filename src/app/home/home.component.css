@@ -1,0 +1,155 @@
+/* Add these at the top of your CSS */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Modify the existing body rule */
+/* Add to existing body rules */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed; /* Add this */
+  width: 100%;
+  height: 100%;
+}
+
+/* Add overflow: hidden to home-container */
+.home-container {
+  background: url('view-desk-items-frame-with-copy-space.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden; /* Add this line */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000; /* Black color for nav items */
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4CAF50; /* Blue hover effect */
+}
+
+/* Auth buttons aligned with navbar */
+.auth-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons button {
+  padding: 0.5rem 1.5rem; /* Adjusted size for auth buttons */
+  background-color: #d1d1d1;
+  border: none;
+  color: #000;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .login-btn {
+  background-color: #fff; /* White background for login */
+  color: #000; /* Black text */
+  border: 1px solid #ccc; /* Subtle border */
+}
+
+.auth-buttons .login-btn:hover {
+  background-color: #4CAF50;
+  transform: translateY(-2px); /* Slight hover effect */
+}
+
+.auth-buttons .signup-btn {
+  background-color: #d1d1d1; /* Same background as section button */
+  color: #000; /* Black text */
+}
+
+.auth-buttons .signup-btn:hover {
+  background-color: #4CAF50;
+  transform: translateY(-2px); /* Hover effect matches section button */
+}
+
+section {
+  text-align: left;
+  padding: 10rem 0 0 2rem; /* Adjust padding to move it closer to the left */
+  margin: 0; /* Ensure no extra margin is added */
+  padding-bottom: 15%;
+}
+
+section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+section h1 span {
+  color: #4CAF50; /* Green color for highlighted text */
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+section button {
+  padding: 0.8rem 2.5rem;
+  background-color: #d1d1d1;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+section button:hover {
+  background-color: #c1c1c1;
+  transform: translateY(-2px);
+}
+
+/* Keep navbar and auth buttons centered/aligned */
+.auth-buttons {
+  /* max-width: 1200px; */
+  margin: 0 auto; /* Centered alignment for auth buttons */
+}
+
+/* Add this at the end of your CSS */
+* {
+  overscroll-behavior: none;
+  touch-action: none;
+}

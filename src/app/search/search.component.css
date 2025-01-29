@@ -1,0 +1,94 @@
+/* Prevent page scrolling */
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure the body takes full height */
+}
+
+/* Container Styling */
+:host {
+  display: block;
+  height: 100vh; /* Full viewport height */
+}
+
+.search-container {
+  background: url('flat-lay-work-space-with-notebook-keyboard.jpg') no-repeat center center/cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Navigation Bar Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%; /* Full width of the viewport */
+  padding: 1rem 0; /* Padding around the nav */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  color: floralwhite;
+}
+
+nav ul li a {
+  font-size: 1rem;
+  color: floralwhite;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+/* Input Section Styling */
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Limit the width of the input */
+}
+
+.input-container input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 40px; /* Add padding to the left for the icon */
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.input-container button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(./searchv.png);
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  margin: 0;
+}
