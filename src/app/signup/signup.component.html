@@ -2,12 +2,12 @@
     <div class="signup-card">
       <h1>Create Account</h1>
       <p>Create an account to unlock exclusive features and enhance your experience with us</p>
-      <form>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
+      <form (ngSubmit)="signup()">
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
         <button type="submit">Sign Up</button>
-      </form>
+      </form>      
       <a href="#">Already have an account</a>
       <p>Or continue with</p>
       <div class="social-icons">

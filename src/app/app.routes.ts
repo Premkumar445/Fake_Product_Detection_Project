@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
+
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'search', component: SearchComponent },
