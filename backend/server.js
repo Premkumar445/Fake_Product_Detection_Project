@@ -12,11 +12,9 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
-//   {
-//   // useNewUrlParser: true,
-//   // useUnifiedTopology: true,
-// }
+mongoose.connect( process.env.MONGO_URI , {
+  family: 4,
+})
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.log(err));
 
@@ -29,13 +27,21 @@ app.post("/signup", async (req, res) => {
 
     // Check if the user already exists
     const existingUser = await User.findOne({ email });
+    
     if (existingUser) {
       return res.status(400).json({ message: "User already exists" });
     }
 
     // Save new user
+
     const newUser = new User({ email, password });
-    await newUser.save();
+      try {
+        const waitingCreation = await newUser.save();
+        console.log("User saved:", waitingCreation);
+    } catch (error) {
+        console.error("Error saving user:", error);
+    }
+
     res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
