@@ -1,20 +1,19 @@
 <div class="login-container">
-    <div class="login-card">
+  <div class="login-card">
       <h1>Login Here</h1>
       <p>Welcome Back!</p>
-      <form>
-        <input type="email" placeholder="Email" class="form-input" />
-        <input type="password" placeholder="Password" class="form-input" />
-        <a href="#" class="forgot-password">Forgot Password?</a>
-        <button type="submit" class="btn btn-primary">Sign-In</button>
-        <a href="/signup"><button type="button" class="btn btn-secondary">Create New Account..</button></a>
+      <form (submit)="onLogin()">
+          <input type="email" placeholder="Email" class="form-input" required />
+          <input type="password" placeholder="Password" class="form-input" required />
+          <a href="#" class="forgot-password">Forgot Password?</a>
+          <button type="submit" class="btn btn-primary">Sign-In</button>
       </form>
+      <a routerLink="/signup"><button type="button" class="btn btn-secondary">Create New Account</button></a>
       <div class="divider">Or continue with</div>
       <div class="social-icons">
-        <button></button>
-        <button></button>
-        <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
       </div>
-    </div>
   </div>
-  
+</div>

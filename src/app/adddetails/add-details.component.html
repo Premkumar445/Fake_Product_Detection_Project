@@ -1,0 +1,49 @@
+<div class="add-product-container">
+    <h1>Add New Product</h1>
+    <p>Fill in the details below to add a new product to the inventory.</p>
+
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <!-- Product Name -->
+        <label>Product Name:</label>
+        <input type="text" formControlName="productName" placeholder="Enter product name" required />
+
+        <!-- Description -->
+        <label>Description:</label>
+        <textarea formControlName="description" placeholder="Enter product description" required></textarea>
+
+        <!-- Price & Quantity -->
+        <div class="flex-group">
+            <div>
+                <label>Price ($):</label>
+                <input type="number" formControlName="price" placeholder="Enter price" required />
+            </div>
+            <div>
+                <label>Quantity:</label>
+                <input type="number" formControlName="quantity" placeholder="Enter quantity" required />
+            </div>
+        </div>
+
+        <!-- Category -->
+        <label>Category:</label>
+        <input type="text" formControlName="category" placeholder="Enter category" required />
+
+        <!-- Brand & SKU -->
+        <div class="flex-group">
+            <div>
+                <label>Brand:</label>
+                <input type="text" formControlName="brand" placeholder="Enter brand name" required />
+            </div>
+            <div>
+                <label>SKU:</label>
+                <input type="text" formControlName="sku" placeholder="Enter SKU" required />
+            </div>
+        </div>
+
+        <!-- Image URL -->
+        <label>Product Image URL:</label>
+        <input type="url" formControlName="imageUrl" placeholder="Enter image URL" required />
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Add Product</button>
+    </form>
+</div>

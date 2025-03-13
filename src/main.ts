@@ -8,7 +8,11 @@ import { AboutComponent } from './app/about/about.component';
 import { AppComponent } from './app/app.component';
 import { ServicesComponent } from './app/services/services.component';
 import { ContactComponent } from './app/contact/contact.component';
+import { ResultComponent } from './app/result/result.component';
+import { AddProductComponent } from './app/adddetails/add-details.component';
 import { Component } from '@angular/core';
+
+
 
 
 
@@ -20,6 +24,8 @@ const routes = [
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'result', component: ResultComponent},
+  { path: 'add-details', component: AddProductComponent},
   { path: '**', redirectTo: '' }
 ];
 

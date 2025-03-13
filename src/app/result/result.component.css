@@ -1,0 +1,119 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navbar links */
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.nav-links a:hover {
+    color: #3abf33;
+}
+
+/* Result Container */
+.result-container {
+    max-width: 800px;
+    margin: 80px auto 50px; /* Adjusted margin for fixed navbar */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Invoice Header */
+.invoice-header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.invoice-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Product Details */
+.invoice-body {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Product Image */
+.product-image img {
+    max-width: 150px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Product Info */
+.product-details {
+    flex: 1;
+}
+
+.product-details h2 {
+    font-size: 22px;
+    color: #222;
+}
+
+.product-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Footer */
+.invoice-footer {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+}
+
+.print-button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+.print-button:hover {
+    background: linear-gradient(45deg,  #3abf33, #0056b3);
+}

@@ -1,0 +1,45 @@
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/services">Services</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/add-details">Add Details</a></li>
+    </ul>
+</nav>
+
+<!-- Result Container -->
+<div class="result-container">
+    <!-- Invoice Header -->
+    <div class="invoice-header">
+        <h1>Product Invoice</h1>
+        <p>Order ID: #123456789</p>
+        <p>Date: {{ currentDate }}</p>
+    </div>
+
+    <!-- Product Details -->
+    <div class="invoice-body">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img [src]="product.imageUrl" alt="Product Image">
+        </div>
+
+        <!-- Product Description -->
+        <div class="product-details">
+            <h2>{{ product.name }}</h2>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+            <p><strong>Brand:</strong> {{ product.brand }}</p>
+            <p><strong>Price:</strong> ${{ product.price }}</p>
+            <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+            <p><strong>Total:</strong> ${{ product.price * product.quantity }}</p>
+            <p><strong>Description:</strong> {{ product.description }}</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="invoice-footer">
+        <p>Thank you for your purchase!</p>
+        <button class="print-button" (click)="printInvoice()">Print Invoice</button>
+    </div>
+</div>
