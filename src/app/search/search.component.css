@@ -3,13 +3,13 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  height: 100vh; /* Ensure the body takes full height */
+  height: 100vh;
 }
 
 /* Container Styling */
 :host {
   display: block;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
 }
 
 .search-container {
@@ -28,8 +28,8 @@ nav {
   justify-content: center;
   position: absolute;
   top: 0;
-  width: 100%; /* Full width of the viewport */
-  padding: 1rem 0; /* Padding around the nav */
+  width: 100%;
+  padding: 1rem 0;
 }
 
 nav ul {
@@ -38,7 +38,6 @@ nav ul {
   gap: 4rem;
   margin: 0;
   padding: 0;
-  color: floralwhite;
 }
 
 nav ul li a {
@@ -50,8 +49,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffcc00; /* Change text color on hover */
-  transform: scale(1.1); /* Slightly enlarge the text on hover */
+  color: #3abf33;
+  transform: scale(1.1);
 }
 
 /* Input Section Styling */
@@ -62,33 +61,51 @@ section {
 }
 
 .input-container {
-  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  max-width: 400px; /* Limit the width of the input */
-}
-
-.input-container input {
-  width: 100%;
-  padding: 1rem 1rem 1rem 40px; /* Add padding to the left for the icon */
+  max-width: 450px;
+  background: white;
   border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.input-container button {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+/* Search Icon Button */
+.search-icon {
   background-image: url(./searchv.png);
-  border: none;
-  cursor: pointer;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 20px;
-  height: 20px;
-  z-index: 1;
-  margin: 0;
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+/* Search Input */
+.input-container input {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Search Button */
+.search-button {
+  padding: 0.8rem 1.5rem;
+  background: #3abf33;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background: linear-gradient(45deg,  #3abf33, #0056b3);
 }

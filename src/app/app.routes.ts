@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
 
 
 export const routes: Routes = [
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   // { path: 'about', component: AboutComponent},
+  // { path: 'services', component: ServicesComponent},
   { path: '**', redirectTo: '' }
 ];
 

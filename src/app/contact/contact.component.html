@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/services">Services</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+        <div class="button-container">
+            <button class="nav-button" routerLink="/login">Login</button>
+            <button class="nav-button signup" routerLink="/signup">Signup</button>
+        </div>
+    </nav>
+
+    <!-- Contact Page Content -->
+    <div class="contact-container">
+        <!-- Header -->
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Get in touch with us today.</p>
+        </div>
+
+        <!-- Contact Form & Info -->
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-card contact-address">
+                    <h2>Our Address</h2>
+                    <p>123 Business Street, City, Country</p>
+                </div>
+
+                <div class="contact-card contact-phone">
+                    <h2>Call Us</h2>
+                    <p>+123 456 7890</p>
+                </div>
+
+                <div class="contact-card contact-email">
+                    <h2>Email Us</h2>
+                    <p>info&#64;business.com</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
