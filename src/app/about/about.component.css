@@ -1,0 +1,145 @@
+/* Reset default margin & padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Navbar elements aligned */
+  align-items: center;
+}
+
+/* Navbar Links Centered */
+.nav-links {
+  list-style: none;
+  display: flex;
+  top: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  gap: 3rem;
+  padding: 8px;
+}
+
+.nav-links a:hover {
+  color: #3abf33;
+}
+
+/* Move buttons to top right */
+.button-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 20px;
+  top: 120%;
+  transform: translateY(-50%);
+}
+
+/* Login & Signup Buttons */
+.nav-button {
+  padding: 8px 15px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #b8babd;
+  color: rgb(24, 24, 24);
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background: #6e6e6f;
+}
+
+.signup {
+  background: #b8babd;
+}
+
+.signup:hover {
+  background: #6e6e6f;
+}
+
+/* Background Styling */
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8px; /* Reduce the gap between navbar and content */
+  min-height: calc(100vh - 90px); /* Prevents unnecessary scrolling */
+}
+
+/* Full Page Background Image */
+body {
+  background: url('about-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+}
+
+/* About Page Header */
+.about-header {
+  background: linear-gradient(45deg,  #3abf33, #0056b3);
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Content Styling */
+.about-content h2 {
+  color: #333;
+  margin-top: 20px;
+  font-size: 1.8rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-content li {
+  font-size: 1.2rem;
+  background: #f8f9fa;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 5px;
+  border-left: 5px solid  #3abf33;
+  text-align: justify;
+}
